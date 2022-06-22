@@ -1,0 +1,19 @@
+.button {
+    background-color: #fff;
+    font-size: medium;
+    border-radius: 6px;
+}
+
+.label {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: black;
+    border: 1px solid #fff;
+    color: #fff;
+}

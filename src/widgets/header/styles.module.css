@@ -1,0 +1,47 @@
+.parent {
+    background-color: black;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.headerLogo {
+    display: flex;
+    align-items: center;
+    font-size: x-large;
+    font-weight: 500;
+}
+
+.header {
+    color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.headerMenu {
+    width: 30%;
+}
+
+.headerMenuList {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.headerMenuListItem {
+    color: grey;
+}
+
+.headerMenuListItem:hover {
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.headerLoginRegistrationOption {
+    display: flex;
+    width: 15%;
+    align-items: center;
+    justify-content: space-around;
+}
