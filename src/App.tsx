@@ -1,12 +1,12 @@
 import React from 'react'
+import LandingPage from './pages/landing-page'
 
 // local imports
-import Header from './widgets/header'
 
 function App () {
   return (
     <div>
-      <Header />
+      <LandingPage />
     </div>
   )
 }

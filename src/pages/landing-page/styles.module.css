@@ -1,0 +1,99 @@
+.parent {
+    background-color: #000000db;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #393939;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.headerLogo {
+    display: flex;
+    align-items: center;
+    font-size: x-large;
+    font-weight: 500;
+}
+
+.header {
+    color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.headerMenu {
+    width: 30%;
+}
+
+.headerMenuList {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.headerMenuListItem {
+    color: grey;
+}
+
+.headerMenuListItem:hover {
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.headerLoginRegistrationOption {
+    display: flex;
+    width: 15%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.mainLandingPageTexts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.landingPageBigText {
+    color: #fff;
+    font-size: 7rem;
+    font-weight: 900;
+    margin: 0.5rem;
+}
+
+.highlightedBigText {
+    background: linear-gradient(to right, yellow 0%, red 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.mainLandingPageDescription {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainLandingPageDescriptionText {
+    color: grey;
+    width: 70%;
+    text-align: center;
+    font-size: 1.3rem;
+    margin-top: 3%;
+    line-height: 2rem;
+}
+
+.mainLandingPageDescriptionText::selection {
+    color: #fff;
+    background: orange;
+}
+
+.infoButtonGroup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
