@@ -1,0 +1,111 @@
+.parent {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainHelperText {
+    color: #fff;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.loginComponent {
+    height: 20%;
+    width: 40%;
+    border: 1px solid rgb(44, 44, 44);
+    border-radius: 10px;
+}
+
+.loginInputForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputElement {
+    border: none;
+    background: #808080ad;
+    width: 90%;
+    height: 30px;
+    padding: 10px;
+    border-radius: 7px;
+    font-size: 1rem;
+    font-weight: bolder;
+    color: #fff;
+    margin: 5%;
+}
+
+.inputElement:focus {
+    outline: none;
+}
+
+.helperButton {
+    color: grey;
+    font-weight: 900;
+}
+
+.helperButton:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.buttonGroup {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.headerParent {
+    background-color: #000000db;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #393939;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.headerLogo {
+    display: flex;
+    align-items: center;
+    font-size: x-large;
+    font-weight: 500;
+}
+
+.header {
+    color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.headerMenu {
+    width: 30%;
+}
+
+.headerMenuList {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.headerMenuListItem {
+    color: grey;
+}
+
+.headerMenuListItem:hover {
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.headerLoginRegistrationOption {
+    display: flex;
+    width: 15%;
+    align-items: center;
+    justify-content: space-around;
+}

@@ -1,0 +1,8 @@
+export const appTitle = 'Milestone'
+export const contactText = 'Contact'
+export const signUpText = 'Sign Up'
+export const loginToMilestoneText = 'Login to Milestone'
+export const emailPlaceHolderText = 'Enter your email'
+export const passwordPlaceHolderText = 'Enter your password'
+export const forgotPasswordText = 'Forgot password'
+export const loginButtonLabel = 'Log me in'
