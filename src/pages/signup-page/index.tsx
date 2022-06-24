@@ -1,40 +1,46 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-// local import
+// local imports
 import styles from './styles.module.css'
-import LargeButton from '../../components/large-button'
-import Button from '../../components/button'
 import {
   appTitle,
   contactText,
-  signUpText,
-  loginToMilestoneText,
-  emailPlaceHolderText,
+  loginText,
+  signUpToMilestone,
+  termsAndServiceText,
+  signUpButtonLabel,
+  usernamePlaceHolderText,
   passwordPlaceHolderText,
-  forgotPasswordText,
-  loginButtonLabel
+  emailPlaceHolderText
 } from './locale/en'
+import LargeButton from '../../components/large-button'
+import Button from '../../components/button'
 
-function LoginPage () {
+function SignUpPage () {
   const navigate = useNavigate()
+  const [username, setUsername] = useState<string>('')
   const [email, setEmail] = useState<string>('')
   const [password, setPassword] = useState<string>('')
 
+  const handleUsernameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { value } = event.target
+
+    setUsername(value)
+  }
   const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = event.target
 
     setEmail(value)
   }
-
   const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = event.target
 
     setPassword(value)
   }
 
-  const goSignUpPage = () => {
-    navigate('/sign-up')
+  const goToLoginPage = () => {
+    navigate('/login')
   }
 
   return (
@@ -48,14 +54,21 @@ function LoginPage () {
                     </section>
                     <section className={styles.headerLoginRegistrationOption}>
                         <p className={styles.headerMenuListItem}>{contactText}</p>
-                        <Button label={signUpText} onClick={goSignUpPage} />
+                        <Button label={loginText} onClick={goToLoginPage} />
                     </section>
                 </div>
             </div>
             <div className={styles.parent}>
-                <p className={styles.mainHelperText}>{loginToMilestoneText}</p>
+                <p className={styles.mainHelperText}>{signUpToMilestone}</p>
                 <div className={styles.loginComponent}>
                     <form className={styles.loginInputForm}>
+                        <input
+                            className={styles.inputElement}
+                            type={'text'}
+                            value={username}
+                            placeholder={usernamePlaceHolderText}
+                            onChange={handleUsernameChange}
+                        />
                         <input
                             className={styles.inputElement}
                             type={'text'}
@@ -72,13 +85,13 @@ function LoginPage () {
                         />
                     </form>
                     <div className={styles.buttonGroup}>
-                        <p className={styles.helperButton}>{forgotPasswordText}</p>
-                        <LargeButton label={loginButtonLabel} onClick={() => {}} />
+                        <p className={styles.helperButton}>{termsAndServiceText}</p>
+                        <LargeButton label={signUpButtonLabel} onClick={() => {}} />
                     </div>
                 </div>
             </div>
         </React.Fragment>
   )
-};
+}
 
-export default LoginPage
+export default SignUpPage

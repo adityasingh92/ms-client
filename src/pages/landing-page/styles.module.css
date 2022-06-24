@@ -16,6 +16,10 @@
     font-weight: 500;
 }
 
+.headerLogo:hover {
+    cursor: pointer;
+}
+
 .header {
     color: #fff;
     width: 100%;

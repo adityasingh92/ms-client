@@ -1,5 +1,6 @@
 import React from 'react'
 import cx from 'classnames'
+import { useNavigate } from 'react-router-dom'
 
 // local imports
 import styles from './styles.module.css'
@@ -8,9 +9,16 @@ import Button from '../../components/button'
 import LargeButton from '../../components/large-button'
 
 function LandingPage () {
-  const handleLoginClick = () => {}
+  const navigate = useNavigate()
+
+  const handleLoginClick = () => {
+    navigate('/login')
+  }
   const handlePlanningClick = () => {}
   const handleLearnMoreClick = () => {}
+  const handleSignUpClick = () => {
+    navigate('/sign-up')
+  }
   return (
         <React.Fragment>
             <div className={styles.parent}>
@@ -32,8 +40,8 @@ function LandingPage () {
                         </ul>
                     </section>
                     <section className={styles.headerLoginRegistrationOption}>
-                        <p className={styles.headerMenuListItem}>{HeaderLocaleEN.loginButtonLabel}</p>
-                        <Button label={HeaderLocaleEN.registerButtonLabel} onClick={handleLoginClick} />
+                        <p onClick={handleLoginClick} className={styles.headerMenuListItem}>{HeaderLocaleEN.loginButtonLabel}</p>
+                        <Button label={HeaderLocaleEN.registerButtonLabel} onClick={handleSignUpClick} />
                     </section>
                 </div>
             </div>

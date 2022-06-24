@@ -5,4 +5,5 @@ body {
     margin: 0;
     font-family: 'Epilogue', sans-serif;
     background-color: black;
+    cursor: default;
 }
