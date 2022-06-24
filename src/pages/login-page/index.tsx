@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 // local import
+import { AppDispatch } from '../../store'
+import { useDispatch } from 'react-redux'
+import { loginInstance } from '../../store/slice/auth.slice'
 import styles from './styles.module.css'
 import LargeButton from '../../components/large-button'
 import Button from '../../components/button'
@@ -18,6 +21,7 @@ import {
 
 function LoginPage () {
   const navigate = useNavigate()
+  const dispatch = useDispatch<AppDispatch>()
   const [email, setEmail] = useState<string>('')
   const [password, setPassword] = useState<string>('')
 
@@ -35,6 +39,13 @@ function LoginPage () {
 
   const goSignUpPage = () => {
     navigate('/sign-up')
+  }
+
+  const handleLogin = () => {
+    dispatch(loginInstance({
+      email,
+      password
+    }))
   }
 
   return (
@@ -73,7 +84,7 @@ function LoginPage () {
                     </form>
                     <div className={styles.buttonGroup}>
                         <p className={styles.helperButton}>{forgotPasswordText}</p>
-                        <LargeButton label={loginButtonLabel} onClick={() => {}} />
+                        <LargeButton label={loginButtonLabel} onClick={handleLogin} />
                     </div>
                 </div>
             </div>
