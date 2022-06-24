@@ -1,5 +1,4 @@
-import { createSlice, Dispatch, PayloadAction } from '@reduxjs/toolkit'
-import { loginApi } from '../../api/auth/index'
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 export interface AuthState {
     getAuth: boolean;
@@ -49,35 +48,6 @@ export const authSlice = createSlice({
     }
   }
 })
-
-export const loginInstance = (payload: {email:string, password:string}) => {
-  return (dispatch: Dispatch) => {
-    loginApi(payload)
-      .then(response => {
-        const payload: AuthState = {
-          getAuth: true,
-          username: response.data.username,
-          email: response.data.email,
-          token: response.data.token,
-          error: '',
-          success: true
-        }
-
-        dispatch(login(payload))
-      }).catch(error => {
-        const payload: AuthState = {
-          getAuth: false,
-          username: '',
-          email: '',
-          token: '',
-          error: error.response.data.message,
-          success: true
-        }
-
-        dispatch(login(payload))
-      })
-  }
-}
 
 export const { logout, login } = authSlice.actions
 export default authSlice.reducer
